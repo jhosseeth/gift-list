@@ -14,21 +14,10 @@ $(document).ready(() => {
     // Inicializa Firebase con la configuración
     firebase.initializeApp(firebaseConfig);
 
-	const logging = e => {
-		console.log('Click en la lista', e.target)
-		$.ajax({
-			url: "giftList.html",
-			dataType: "html"
-		}).done(data => {
-			$('body').html(data)
-		})
-	}
-
 	$.ajax({
 		url: "login.html",
 		dataType: "html"
 	}).done(data => {
 		$('body').append(data)
-		$('li').on('click', logging)
 	})
 })
