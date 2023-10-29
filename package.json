@@ -1,0 +1,23 @@
+{
+  "name": "christmas-gifts",
+  "version": "1.0.0",
+  "description": "App para lista de regalitos",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server ./public/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhosseeth/christmas-gifts.git"
+  },
+  "author": "Jhosseeth Naranjo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhosseeth/christmas-gifts/issues"
+  },
+  "homepage": "https://github.com/jhosseeth/christmas-gifts#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
