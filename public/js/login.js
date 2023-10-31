@@ -1,9 +1,10 @@
 
 const usersData = data => {
 	const usersId = Object.keys(data)
+	let usersCounter = 0
 	return usersId.map(userId => {
 		return {
-			id: userId,
+			id: ++usersCounter,
 			name: data[userId].name,
 			email: data[userId].email
 		}
@@ -73,11 +74,11 @@ const goToHomePage = () => {
 	})
 }
 
-const giftsRef = firebase.database().ref('gifts')
+const usersRef = firebase.database().ref('users')
 
-giftsRef.get().then(snapshot => {
+usersRef.get().then(snapshot => {
 	if (snapshot.exists()) {
-		var users = usersData(snapshot.val())
+		const users = usersData(snapshot.val())
 		showUsers(users)
   	} else {
     	console.log("No data available");
